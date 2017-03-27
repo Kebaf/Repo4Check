@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900')
+$kebaf-font: 'Raleway', sans-serif
+$kebaf-dark: #313332
+$kebaf-blue: #00C7E8
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
+*
+	box-sizing: border-box
+
+body 
+	font-family: 'Open Sans', sans-serif
+	margin: 0 auto
+
+.container 
+	max-width: 1200px
+	text-align: center
+	margin: 0 auto
+
+.row:before,
+.row:after 
+	content: ""
+	display: table
+	clear: both
+
+header 
+	background-color: $kebaf-dark
+
+	img 
+		margin: 5px
+		float: left
+
+	ul 
+		margin: 5px
+		float: right
+
+	li 
+		display: inline-block
+
+	a 
+		color: #fff
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 20px
+		padding: 0 10px
+		height: 50px
+		line-height: 50px
+		&:hover
+			color: $kebaf-blue
+
+
+.hero 
+	img 
+		width: 100%
+		height: 500px
+		
+.sloganPrzykladExtend
+	position: absolute
+	width: 40%
+	top: 160px
+	right: 0
+	background-color: rgba(0, 0, 0, 0.5)
+	color: #fff
+	padding: 15px
+	text-transform: uppercase
+	font-size: 20px
+	h1 
+		font-weight: 100
+	h1:nth-child(2) 
+		font-weight: 900
+		
+.slogan 
+	@extend .sloganPrzykladExtend
+
+.kropki 
+	color: gray
+	position: relative
+	bottom: 35px
+	font-size: 25px
+	.fa:nth-child(2) 
+		color: #fff
+		padding: 0 20px
+
+[class*="col-"] 
+	float: left 
+	min-height: 1px
+	padding: 0px
+	text-align: center
+
+.col-1 
+	width: 8.33%
+.col-2 
+	width: 16.66%
+.col-3 
+	width: 25%
+.col-4 
+	width: 33.33%
+.col-5 
+	width: 41.66%
+.col-6 
+	width: 50%
+.col-7 
+	width: 58.33%
+.col-8 
+	width: 66.66%
+.col-9 
+	width: 75%
+.col-10 
+	width: 83.33%
+.col-11 
+	width: 91.66%
+.col-12 
+	width: 100%
+
+.benefits-btn 
+	.fa 
+		margin-top: 100px
+		color: #fff
+		font-size: 60px
+		background-color: $kebaf-dark
+		padding: 20px
+		+border-radius(10%)
+	&:hover i 
+		background-color: $kebaf-blue
+	&:hover h1 
+		color: $kebaf-blue
+	a 
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 12px
+	a > h1 
+		font-family: $kebaf-font
+		color: $kebaf-dark
+	+ p 
+		margin-bottom: 100px
+
+.feature 
+	h1 
+		text-transform: uppercase
+		font-family: $kebaf-font
+	p 
+		margin-bottom: 100px
+
+.gallery img 
+	padding: 0
+	width: 100%
+	height: 150px
+	display: block
+
+.layer 
+	color: #fff
+	position: absolute
+	width: inherit
+	height: 150px
+	line-height: 150px
+	.fa 
+		padding: 15px
+		border-radius: 10%
+		background-color: $kebaf-dark
+		visibility: hidden
+	&:hover 
+		.fa 
+			visibility: visible
+	&:hover 
+		background-color: rgba(0,0,0,0.5)
+
+.col-3 
+	position: relative
+
+.team 
+	display: flex
+	justify-content: center
+	align-items: center	
+	img 
+		margin-top: 100px
+		+border-radius(50%)
+		height: 250px
+	p 
+		position: absolute
+		color: #fff
+		font-size: 30px
+		visibility: hidden
+	&:hover 
+		img 
+			background-color: rgba(0,0,0,0.5)
+	&:hover 
+		p 
+			visibility: visible	
+
+.people h1 
+	font-size: 35px
+
+.promo 
+	background-color: rgba(0,0,0,0.5)
+	height: 226px
+	margin-top: 100px
+	img 
+		width: 150px
+	p 
+		text-align: left
+		color: #fff
+	h1 
+		font-family: $kebaf-font
+		text-align: left
+		color: #fff
+		text-transform: uppercase
+
+.numbers 
+	font-family: $kebaf-font
+	h1 
+		text-align: center
+		font-size: 40px
+	p 
+		margin-top: 0
+		margin-bottom: 80px
+		color: $kebaf-blue
+		text-transform: uppercase
+
+.stopka h1,
+.stopka h4,
+.stopka p 
+	text-align: left
+
+footer 
+	color: #fff
+	background-color: $kebaf-dark
+	margin: 0
+	> div > p 
+		position: relative
+		bottom: -20px
+		background-color: #090E0B
+		padding: 20px
+	> div > div h1::after 
+		letter-spacing: -2px
+		content: "   -------"
+	> div > div h4,
+	> div > div p 
+		margin: 0
+
+.social-btn 
+	.fa 
+		width: 70px
+		color: #fff
+		font-size: 20px
+		padding: 20px
+		margin: 5px
+		background-color: $kebaf-blue
+		+border-radius(5%)
+		&:hover 
+			background-color: rgba(0, 199, 232, 0.5)
+
+
+@media (max-width: 767px)
+
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+	
+	header
+		img 
+			margin: 5px
+			float: none
+		> nav > ul 
+			padding-left: 0
+			margin: 5px
+			float: none
+		> nav > ul > li 
+			display: block
+	
+	.slogan 
+		top: 450px
+		width: 80%
+	
+	.gallery img 
+		padding: 5px
+	
+	.benefits-btn .fa 
+		margin-top: 20px
+	
+	.benefits-btn + p,
+	.feature p  
+		margin-bottom: 20px
+	
+	.layer .fa 
+		visibility: visible
+	
+	.team 
+		p 
+			visibility: visible
+		img 
+			margin-top: 20px
+			background: rgba(0,0,0,0.5)
+	
+	.promo h1,
+	.promo p 
+		color: #000
+		margin: 10px
+	
+	.promo h1,
+	.promo p,
+	.stopka h1,
+	.stopka p 
+		text-align: center
+	
+	.stopka h1,
+	.stopka p,
+	.stopka h4 
+		padding: 0 10px
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
